@@ -1,0 +1,20 @@
+{
+  "name": "universal-video-downloader-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "node -e \"const w=require('yt-dlp-wrap');const W=w.default||w;W.downloadFromGithub && W.downloadFromGithub().catch(()=>{})\""
+  },
+  "dependencies": {
+    "@distube/ytdl-core": "^4.16.12",
+    "axios": "^1.19.0",
+    "cors": "^2.8.6",
+    "express": "^4.18.2",
+    "morgan": "^1.11.0",
+    "yt-dlp-wrap": "^2.3.12"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
